@@ -9,15 +9,10 @@ public class CameraFollowing : MonoBehaviour
 {
 
     public Rigidbody2D toFollow;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        transform.position = new Vector3(toFollow.transform.position.x, toFollow.transform.position.y, transform.position.z);
     }
 }
